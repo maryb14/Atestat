@@ -2,4 +2,18 @@
 	margin: 10px;
 }
 
+.motiv {
+	text-align: center;
+	position: fixed;
+	right: 200px;
+	top: 100px;
+	font-size: 20px;
+}
 
+.article {
+	text-align: justify;
+	position: fixed;
+	right: 200px;
+	top: 100px;
+	font-size: 15px;
+}

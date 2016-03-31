@@ -70,7 +70,7 @@
 </script>
 
 <script type="text/ng-template" id="knowmore.html">
-		<div class = "article col-md-8 col-xs-8"> 
+		<div class = "motiv col-md-8 col-xs-8"> 
 			Inteligenta artificiala este studiul facultatilor mentale pe baza modelelor computationale.
 			IA se ocupa de studiul si crearea sistemelor de calcul si a programelor care prezinta o forma de inteligenta: sisteme care invata noi concepte, care pot rationa si deduce concepte utile intr-un domeniu al lumii inconjuratoare, sisteme care pot intelege limbajul natural sau percepe si intelege o imagine, intr-un cuvint sisteme care necesita capacitati inteligente specifice omului.
 		</div>

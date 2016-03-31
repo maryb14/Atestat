@@ -1,4 +1,4 @@
 $(document).ready(function(){
-	$("#text").load("motivatie.txt");
+	$(".workplease").load("motivatie.txt");
 });
 
