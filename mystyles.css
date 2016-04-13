@@ -4,7 +4,7 @@
 
 .motiv {
 	text-align: center;
-	position: fixed;
+	position: absolute;
 	right: 200px;
 	top: 100px;
 	font-size: 20px;
@@ -12,8 +12,26 @@
 
 .article {
 	text-align: justify;
-	position: fixed;
+	position: absolute;
 	right: 200px;
 	top: 100px;
 	font-size: 15px;
+}
+
+html { 
+	overflow: scroll;
+}
+
+.ytvideo {
+	display: block;
+	text-align: center;
+}
+
+img {
+	position: absolute;
+	float: right;
+}
+
+body {
+	background-image: url("http://www.designbolts.com/wp-content/uploads/2013/02/Texture-Tasty-Grey-Seamless-Pattern-For-Website-Background.jpg");
 }
