@@ -6,9 +6,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
   var home  = { name: 'home',  url: '/',       templateUrl: 'home.html'  };
   var istoric = {name: 'istoric', url: '/istoric', templateUrl: 'istoric.html'};
   var knowmore = {name: 'knowmore', url: '/knowmore', templateUrl: 'knowmore.html'};
+  var minimax = {name: 'minimax', url: '/minimax', templateUrl: 'minimax.html'};
   $stateProvider.state(home);
   $stateProvider.state(istoric);
   $stateProvider.state(knowmore);
+  $stateProvider.state(minimax);
   $urlRouterProvider.otherwise('/');
 }]);
 
@@ -32,6 +34,11 @@ app.controller('AIAppController', ['$scope', '$state', function($scope, $state) 
   }
 
   $scope.goToKnowmorePage = goToKnowmorePage;
+  
+  function goToMinimaxPage() {
+    $state.go('minimax');
+  }
+  $scope.goToMinimaxPage = goToMinimaxPage;
   // end
 
   window.sc = $scope;
