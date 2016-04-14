@@ -29,7 +29,7 @@ html {
 
 img {
 	position: absolute;
-	float: right;
+	display: block;
 }
 
 body {
