@@ -17,7 +17,7 @@
 </html>
 
 	<head>
-    		<title> Aplicatii ale inteligentei articifiale </title>
+    		<title> Prezentare a inteligentei articifiale </title>
     		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 
@@ -31,13 +31,14 @@
         					<span class="icon-bar"></span>
         					<span class="icon-bar"></span>
       					</button>
-      					<a class="navbar-brand" href="#" ng-click = "goToHomePage();"> Aplicatii AI </a>
+      					<a class="navbar-brand" href="#" ng-click = "goToHomePage();"> Prezentare AI </a>
     				</div>
     				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     					<ul class="nav navbar-nav">
     						<li> <a href="" ng-click = "goToHomePage();" > Home </a> </li>
     						<li> <a href="" ng-click = "goToKnowmorePage();"> Ce este AI? </a> </li>
     						<li> <a href="" ng-click = "goToIstoricPage();"> Istoric </a> </li>
+    						<li> <a href="" ng-click = "goToMinimaxPage();"> Algoritm minimax </a></li>
       					</ul>
 				</div>
   			</div>
@@ -51,6 +52,28 @@
 	<div class = "motiv col-md-8 col-xs-8">
 		Intitulat "Aplicatii ale inteligentei artificiale" acest website isi propune sa prezinte o parte din principiile de baza ale 			domeniului inteligentei artifiaciale si sa ofere o perspectiva asupra aplicatiilor acestuia.
 		Intr-o vreme in care calculatoare performate reusesc sa invinga cei mai buni jucatori de sah sau celebrul joc chinezesc "go", 			inteligenta artificiala pare sa ia un nou avant spre dezvoltare, avand un potential enorm de a ne schimba vietile. Se impune 			astfel o cunoastere a locului si progresului cercetarilor actuale, cunoastere pe care acest proiect spera sa o faciliteze.
+	</div>
+</script>
+
+<script type="text/ng-template" id="minimax.html">
+	<div class = "article col-md-8 col-xs-8">
+		<h3> Algoritmul minimax cu tăieturi alpha-beta </h3>
+		Algoritmul minimax este util in rezolvarea unor jocuri combinatoriale, precum X si O, Go sau sah, jocuri in care se la ambii jucatori se asteapta sa adopte strategia optima, ceea care ii va aduce cel mai aproape de castig. Pentru fiinta umana, atunci cand joaca astfel de jocuri, strategia vine natural si nu are nevoie de clare reguli algoritmice pentru cum va functiona. In cazul unui calculator, lucrurile stau diferit si algoritmul minimax este o metoda prin care o masina poate juca un joc combinatorial.
+		<br/>
+		Pentru simplitate, vom considera ca primul jucator este intotdeauna calculatorul. Aceasta nu este o problema, algoritmul putand fi extins analog si pentru cazul cand omul face prima mutare. Calculatorul va incerca deci sa gandeasca “in avans”, analizand starile in care se poate ajunge din pozitia actuala si alegand-o pe ceea mai potrivita. Aceste stari vor fi reprezentate in memoria calculatorului printr-un arbore, in varful caruia se va afla starea initiala (de exemplu, tabla de X si O necompletata), precum se arata in figura urmatoare: 
+		<br/>
+		<img src="http://ocw.cs.pub.ro/courses/_media/pa/laboratoare/5.1_cr.png?cache=&w=474&h=307&tok=f50bf7" alt="XOphoto">
+		Algoritmul presupune stabilirea unui jucator de maxim si unul de minim. Astfel, atunci cand vor face o mutare, fiecare va alege cea mai favorabila stare pentru el si cea mai nefavorabila pentru celalalt, prin intermediul valorilor atribuite fiecarei stari printr-un algoritm recursiv. Se va parcurge deci intreg arborele si la fiecare nivel, in functie de paritatea sa, se va atribui fiecarui nod valoarea cea mai mare (nivele impare) sau cea mai mica (nivele pare) dintre valorile copiilor sai, stabilite deja. In imaginea urmatoare, calculatorul, cel care face prima mutare si toate mutarile de ordin impar, este jucator de minim si oponentul este jucator de maxim: <br/>
+		<img src="http://www3.ntu.edu.sg/home/ehchua/programming/java/images/GameTTT_minimax.png" alt="minmaxphoto"> <br/>
+		Desi pentru jocuri precum X si O, starile posibile nu sunt in numar foarte mare, in cazul sahului, de exemplu, analiza tuturor posibilelor configuratii ale tablei este aproape imposibila, datorita limitarii resurselor in timp si spatiu. Astfel, algoritmul minimax poate fi imbunatatit prin asa-numitele “taieturi alpha-beta”, care presupun eliminarea analizei unor stari care nu au cum sa fie atinse.<br/>
+		<img src="http://3x4ca.3x.ro/moara/minimax.files/image002.jpg" alt="alphabetaphoto">
+		<br/>
+			Privind figura se observa ca in cazul unei analize stanga-dreapta a nodurilor arborelui, valoarea din varful E nu mai intereseaza, deoarece este imposibil de ajuns in aceasta stare. Deoarece valoarea din D este 5, mai mica decat 10, iar varful C face parte dintr-un nivel de minim, valoarea din acesta va fi mai mica decat 10 si deci nu va fi preferat nodului B, care are clar o valoare mai mare si este copil al unui nod de maxim.
+	<br/>
+	Astfel, tot subarborele nodului E nu va mai fi evaluat. Aceasta strategie s-a aplicat deci nivelului 2, de minim, efectuandu-se o taietura alpha asupra unuia dintre copii nodurilor acestui nivel. Analog, se pot face taieturi nivelurilor de maxim, cu mici modificari in comparatiile efectuate. Aceste taieturi se vor numi beta.
+	<br/>
+	Trebuie observat ca in cazul unui joc calculator-om, taieturile pot fi facute doar in cazul nivelurilor in care la mutare este calculatorul. In timp ce el va alege intotdeauna strategia optima si deci starile mai nefavorabile pot fi eliminate fara nicio grija, omul poate alege si o stare care nu este cea mai optima conform algoritmului prezentat in aceste pagini
+	<br/>
 	</div>
 </script>
 
