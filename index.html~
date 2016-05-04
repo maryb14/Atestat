@@ -1,77 +1,144 @@
 <html ng-app="AIApp">
 
-	
-   <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" type="text/css" href="mystyles.css" media="screen" />
-  <script src="jquery-1.12.2.js"></script>
-  <script src="myjquery.js"> </script>
-  <script src="js/underscore.js"></script>
-  <script src="js/angular.js"></script>
-  <script src="js/angular-ui-router.js"></script>
-  <script src="js/app.js"></script>
+<link rel="stylesheet" type="text/css" href="mystyles.css" media="screen" />
+<script src="jquery-1.12.2.js"></script>
+<script src="myjquery.js"> </script>
+<script src="js/underscore.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/angular-ui-router.js"></script>
+<script src="js/app.js"></script>
  
 </html>
 
-<head>
-    <title>Aplicatii ale inteligentei articifiale</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+	<head>
+    		<title> Prezentare a inteligentei articifiale </title>
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
 
-<body ng-controller = "AIAppController">
- 	<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#" ng-click = "goToHomePage();">Aplicatii AI</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    	<ul class="nav navbar-nav">
-    		<li><a href="" ng-click = "goToHomePage();" >Home</a></li>
-    		<li><a href="" ng-click = "goToKnowmorePage();">Ce este IA?</a></li>
-    		<li><a href="" ng-click = "goToIstoricPage();">Istoric</a></li>
-      	</ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-<div ui-view> </div>
-
-
-</body>
-
+	<body ng-controller = "AIAppController">
+ 		<nav class="navbar navbar-default">
+  			<div class="container-fluid">
+    				<div class="navbar-header">
+      					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        					<span class="sr-only">Toggle navigation</span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+      					</button>
+      					<a class="navbar-brand" href="#" ng-click = "goToHomePage();"> Prezentare AI </a>
+    				</div>
+    				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    					<ul class="nav navbar-nav">
+    						<li> <a href="" ng-click = "goToHomePage();" > Home </a> </li>
+    						<li> <a href="" ng-click = "goToKnowmorePage();"> Ce este AI? </a> </li>
+    						<li> <a href="" ng-click = "goToIstoricPage();"> Istoric </a> </li>
+    						<li> <a href="" ng-click = "goToMinimaxPage();"> Algoritm minimax </a></li>
+      					</ul>
+				</div>
+  			</div>
+		</nav>
+		<div ui-view> 
+		</div>
+	</body>
 </html>
 
 <script type="text/ng-template" id="home.html">
-		<div class = "motiv col-md-8 col-xs-8">
-			Intitulat "Aplicatii ale inteligentei artificiale" acest website isi propune sa prezinte o parte din principiile de baza ale domeniului inteligentei artifiaciale si sa ofere o perspectiva asupra aplicatiilor acestuia.
-			Intr-o vreme in care calculatoare performate reusesc sa invinga cei mai buni jucatori de sah sau celebrul joc chinezesc "go", inteligenta artificiala pare sa ia un nou avant spre dezvoltare, avand un potential enorm de a ne schimba vietile. Se impune astfel o cunoastere a locului si progresului cercetarilor actuale, cunoastere pe care acest proiect spera sa o faciliteze.
-		</div>
+	<div class = "motiv col-md-8 col-xs-8">
+		Intitulat "Aplicatii ale inteligentei artificiale" acest website isi propune sa prezinte o parte din principiile de baza ale 			domeniului inteligentei artifiaciale si sa ofere o perspectiva asupra aplicatiilor acestuia.
+		Intr-o vreme in care calculatoare performate reusesc sa invinga cei mai buni jucatori de sah sau celebrul joc chinezesc "go", 			inteligenta artificiala pare sa ia un nou avant spre dezvoltare, avand un potential enorm de a ne schimba vietile. Se impune 			astfel o cunoastere a locului si progresului cercetarilor actuale, cunoastere pe care acest proiect spera sa o faciliteze.
+	</div>
+</script>
+
+<script type="text/ng-template" id="minimax.html">
+	<div class = "article col-md-8 col-xs-8">
+		<h3> Algoritmul minimax cu tăieturi alpha-beta </h3>
+		Algoritmul minimax este util in rezolvarea unor jocuri combinatoriale, precum X si O, Go sau sah, jocuri in care se la ambii jucatori se asteapta sa adopte strategia optima, ceea care ii va aduce cel mai aproape de castig. Pentru fiinta umana, atunci cand joaca astfel de jocuri, strategia vine natural si nu are nevoie de clare reguli algoritmice pentru cum va functiona. In cazul unui calculator, lucrurile stau diferit si algoritmul minimax este o metoda prin care o masina poate juca un joc combinatorial.
+		<br/>
+		Pentru simplitate, vom considera ca primul jucator este intotdeauna calculatorul. Aceasta nu este o problema, algoritmul putand fi extins analog si pentru cazul cand omul face prima mutare. Calculatorul va incerca deci sa gandeasca “in avans”, analizand starile in care se poate ajunge din pozitia actuala si alegand-o pe ceea mai potrivita. Aceste stari vor fi reprezentate in memoria calculatorului printr-un arbore, in varful caruia se va afla starea initiala (de exemplu, tabla de X si O necompletata), precum se arata in figura urmatoare: 
+		<br/>
+		<img src="http://ocw.cs.pub.ro/courses/_media/pa/laboratoare/5.1_cr.png?cache=&w=474&h=307&tok=f50bf7" alt="XOphoto" class="photo">	
+		<br/>
+		Algoritmul presupune stabilirea unui jucator de maxim si unul de minim. Astfel, atunci cand vor face o mutare, fiecare va alege cea mai favorabila stare pentru el si cea mai nefavorabila pentru celalalt, prin intermediul valorilor atribuite fiecarei stari printr-un algoritm recursiv. Se va parcurge deci intreg arborele si la fiecare nivel, in functie de paritatea sa, se va atribui fiecarui nod valoarea cea mai mare (nivele impare) sau cea mai mica (nivele pare) dintre valorile copiilor sai, stabilite deja. In imaginea urmatoare, calculatorul, cel care face prima mutare si toate mutarile de ordin impar, este jucator de minim si oponentul este jucator de maxim: <br/>
+		<img src="http://www3.ntu.edu.sg/home/ehchua/programming/java/images/GameTTT_minimax.png" alt="minmaxphoto" class="photo"> <br/>
+		Desi pentru jocuri precum X si O, starile posibile nu sunt in numar foarte mare, in cazul sahului, de exemplu, analiza tuturor posibilelor configuratii ale tablei este aproape imposibila, datorita limitarii resurselor in timp si spatiu. Astfel, algoritmul minimax poate fi imbunatatit prin asa-numitele “taieturi alpha-beta”, care presupun eliminarea analizei unor stari care nu au cum sa fie atinse.<br/>
+		<img src="http://3x4ca.3x.ro/moara/minimax.files/image002.jpg" alt="alphabetaphoto" class="photo">
+		<br/>
+			Privind figura se observa ca in cazul unei analize stanga-dreapta a nodurilor arborelui, valoarea din varful E nu mai intereseaza, deoarece este imposibil de ajuns in aceasta stare. Deoarece valoarea din D este 5, mai mica decat 10, iar varful C face parte dintr-un nivel de minim, valoarea din acesta va fi mai mica decat 10 si deci nu va fi preferat nodului B, care are clar o valoare mai mare si este copil al unui nod de maxim.
+	<br/>
+	Astfel, tot subarborele nodului E nu va mai fi evaluat. Aceasta strategie s-a aplicat deci nivelului 2, de minim, efectuandu-se o taietura alpha asupra unuia dintre copii nodurilor acestui nivel. Analog, se pot face taieturi nivelurilor de maxim, cu mici modificari in comparatiile efectuate. Aceste taieturi se vor numi beta.
+	<br/>
+	Trebuie observat ca in cazul unui joc calculator-om, taieturile pot fi facute doar in cazul nivelurilor in care la mutare este calculatorul. In timp ce el va alege intotdeauna strategia optima si deci starile mai nefavorabile pot fi eliminate fara nicio grija, omul poate alege si o stare care nu este cea mai optima conform algoritmului prezentat in aceste pagini
+	<br/>
+	</div>
 </script>
 
 <script type="text/ng-template" id="istoric.html">
-		<div> 
-			istorioare
-		</div>
+	<div class = "article col-md-8 col-xs-8"> 
+		<h3> Istoric al inteligentei artificiale </h3> <br/>
+			Domeniul AI a luat nastere in anii 1940-1950, fiind declansat de noile descoperii in neurologie care demonstrau ca 				creierul uman este o retea electrina de neuroni pornita de impulsuri cu caracter digital.  Acestea, alaturi de teoria 				informatiei elaborata de Claude Shannon sau de cea computationala scrisa de Alan Turing au dus la ideea construirii 				unui “creier electronic”, idee analizata de Walter Pitts si Warren McCulloch, care au aratat cum astfel de electroni 				pot sa realizeze functii logice simple. <br/>
+			Urmatorul pas a fost facut in 1950 de Alan Turing care a elaborat testul Turing, un test care desi descris acum mai 				bine de 60 ani ramane valid, in mare parte deoarece o masina are trebuie, pentru a trece testul Turing, sa inteleaga 				discursul uman, sa reactioneze corespunzator la el prin raspunsuri care sunt in acelasi timp logice in concordanta cu 				realitatea umana si corecte gramatical.<br/>
+			Un an mai tarziu, Christopher Strachey si Arthur Samuel scriu programe pentru celebrele jocuri de sah si checkers, folosindu-se de calculatorul existent la Universitatea din Manchester.<br/>
+Universitatea Dartmouth a fost locul unde, in 1956, domeniul inteligentei artificiale a fost formalizat intr-o conferinta unde au luat parte cei mai importanti cercetatori in acest domeniu din secolul trecut, printre ei Marvin Minsky, John McCarthy, Claude Shannon, Arthur Samuel, Allen Newell sau Herbert A. Simon.<br/>
+Urmatoarele doua decenii au insemnat noi descoperirii si rapide avansari in inteligenta artificiala, provocate de optimismul general legat de posibilitatea construirii unui calculator inteligent.<br/>
+O prima dezvoltare importanta a fost desemnata de ideea unor sisteme inteligente a caror comportament era determinat printr-o cautare intr-un arbore de stari posibile, intr-un algoritm asemanator tehnicii backtracking. Deseori, numarul de cazuri posibile era mult prea mare, astfel incat de recurgea la optimizari si euristici.<br/>
+O alta idee a fost reprezentata de retelele semantice care propuneau realizarea unei “panze” intre concepte prin relatiile dintre ele. Un astfel de program a fost creat de Roger Schank la Universitatea Stanford, iar acesta incerca sa creeze un sistem in care intelesul propozitiilor devenea intependent de cuvintele folosite prin codificarea acestora prin niste “token-uri” de baza, precum obiecte, actiune, date sau locatii.<br/>
+In aceeasi perioada, numeroase universitati, precum MIT, Universitatea din Edinburgh sau Universitatea Stanford primeau fonduri importante pentru cercetari si construirea de laboratoare. Esecul lor in a livra ceea ce promiteau atat de optimisti a insemnat o perioada de recesiune in domeniul inteligentei artificiale, avand in vedere scepticismul crescand al investitorilor.  Ceea ce a cauzat lipsa de rezultate in cercetare a fost limitarea resurselot computationale de la acel moment. Nu numai ca masinile aveau capacitati mult mai limitate ca cele pe care noi le utilizam zilnic astazi, dar volumul de informatii (fie ca este vorba despre starile posibile ale unui sistem sau de cuvinte, propozitii si reguli gramaticale) era pur si simplu mult prea mare pentru stadiul in care componentele de hardware se aflau atunci.<br/>
+Seceta de fonduri avea sa se incheie in anii 80, cand noi descoperiri aveau sa revitalizeze domeniul in discutie. In primul rand, au fost dezvoltate sistemele expert, sisteme care rezolva probleme dintr-un anumit domeniu restrans de cunostinte. Primele exemple au fost construite de Edward Feigenbaum si studentii sai: Dendral (1965) identifica componente prin citire specometrice, iar MYCIN (1972) diagnostica boli sangvine infectioase.<br/>
+In timp ce Douglas Lenat initia un program prin care sa ii dea unui calculator toate informatiile detinute de un adult obisnuit, iar programe precum Deep Thought sau HiTech castigau partide de sah impotriva unor jucatori umani redutabili, Japonia finanta programe care incercau sa construiasca calculatoare ce gandesc precum oamenii si Marea Britanie si Statele Unite raspundeau prin triplarea fonduri alocate cercetarilor in inteligenta artificiala.<br/>
+In 1982, John Hopfield, David Rumelhart sau Paul Werbos revolutionau programul conectivismului, propunand noi metode si modele pentru functionarea retelelor neuronale. Succesul lor a fost intarit de aparitia cartii de referinta “Parallel Distributed Processing” in 1986 si de comercializarea retelor in sisteme pentru recunoastere vocala sau a caracterelor optice.<br/>
+Dupa o alta perioda de liniste, inteligenta artificiala va obtine mari victorii in anii 90 in principal prin programul Deep Blue, care va invinge pentru prima data pe campionul mondial la sah, Garry Kasparov. Mai tarziu, vor fi create programe care inving campioni la jocuri precum Jeopardy! sau Go. O alta dezvoltare importanta in aceasta perioada a fost accea a agentilor inteligenti, mentionati in sectiunea anterioara.<br/>
+La momentul actual, inteligenta artificiala deja a patruns in vietile noastre prin cautarea Google care foloseste idei din “machine learning”, o metoda pentru a eficientiza relevanta rezultatelor cautarilor, sau prin Cortana, Siri si recentul Facebook M, voci care asista utilizatori in sisteme informatice precum Windows sau IOS. In acelasi timp dezvoltarile viitoare par din ce mai promitatoare si creeaza din ce in ce mai multe controverse, care pun sub lupa moralitatii noastre esenta fiintei umane, modul nostru de viata si relatia pe care o avem cu tehnologia. Suntem gata sa ne lasam pe mana unor masini care se conduc singure, unor doctori roboti care ne opereaza sau unor masini care ne controleaza resursele casei?<br/>
+<img src="http://images.slideplayer.com/1/272677/slides/slide_35.jpg" alt="History_Photo">
+	</div>
 </script>
 
 <script type="text/ng-template" id="knowmore.html">
-		<div class = "motiv col-md-8 col-xs-8"> 
-			Inteligenta artificiala este studiul facultatilor mentale pe baza modelelor computationale.
-			IA se ocupa de studiul si crearea sistemelor de calcul si a programelor care prezinta o forma de inteligenta: sisteme care invata noi concepte, care pot rationa si deduce concepte utile intr-un domeniu al lumii inconjuratoare, sisteme care pot intelege limbajul natural sau percepe si intelege o imagine, intr-un cuvint sisteme care necesita capacitati inteligente specifice omului.
+		<div class = "article col-md-8 col-xs-8">
+
+		<h3> Ce este inteligenta artificiala? </h3> <br/>
+
+		In ultimii ani, aproape chiar de cand calculatoarele incepeau sa isi dezvaluie din abilitati,
+ vizionari precum Alan Turing, Walter Pitts, Marvin Minsky sau John McCarthy isi imaginau construirea
+ unor calculatoare capabile sa rationeze si sa gaseasca solutii precum fiintele umane. Tocmai de aceea, gasirea unei definitii pentru acest domeniu este destul de grea, avand in vedere ca implicatiile inteligentei artificiale se extind in afara domeniului informaticii si ajung sa aiba reverberatii in domenii precum psihologia, neurologia sau matematica. <br/>
+
+Exista insa cateva definitii care circula, incercand sa rezume in cateva cuvinte, ce este si implicit, cu ce se ocupa inteligenta artificiala. Dintre acestea, amintim <br/>
+<ul>
+<li>
+	Inteligenta artificiala este domeniul stiintei calculatoarelor care se ocupa de studiul si crearea sistemelor de calcul si a programelor care prezinta o forma de inteligenta: sisteme care invata noi concepte, care pot rationa si deduce concepte utile intr-un domeniu al lumii inconjuratoare, sisteme care pot intelege limbajul natural sau percepe si intelege un peisaj, intr-un cuvint sisteme care necesita capacitati inteligente specifice omului. </li>	
+<li> Inteligenta artificiala este studiul ideilor care permit calculatoarelor sa fie inteligente. </li>
+<li>Inteligenta artificiala este studiul facultatilor mentale pe baza modelelor computationale. </li>
+<li>Inteligenta artificiala se distinge prin subiectele pe care le trateaza, nu prin istorie sau metode specifice. Subiectul tratat de inteligenta artificiala este mintea, considerata ca un sistem de prelucrare a informatiei. </li>
+<li>Un program inteligent este un program care manifesta o comportare similara cu aceea a omului cind este confruntat cu o problema similara. Nu este necesar ca programul sa rezolve sau sa incerce sa rezolve problema in acelasi mod in care ar rezolva-o oamenii. </li>
+<li>Inteligenta artificiala este studiul procesului prin care calculatoarele pot fi instruite sa faca lucruri care, pentru moment, sunt facute mai bine de oameni. </li>
+</ul>
+Pe langa acestea, un aspect important in cunoasterea inteligentei artificiale este clasificarea principalelor paradigme existente in domeniu: <br/>
+<ul>
+<li> 
+	comportament uman <br/>
+	Calculatorul nu trebuie neaparat sa gandeasca asemenea unui om, ci doar sa se comporte ca unul. La baza acestei viziuni sta testul Turing, conceput in 1950 de matematicianul englez Alan Turing, care presupune o interactiune, de obicei o conversatie, dintre o masina si un om, acesta din urma nestiind daca vorbeste cu un calculator sau cu o alta fiinta umana. Daca masina reuseste sa il pacaleasca pe om astfel incat acesta sa creada ca interactioneaza cu un alt om, atunci ea a trecut testul Turing. Totusi, aceasta paradigma nu a fost foarte indeaproape exploatata de cercetatori, ei preferand sa se axeze pe ce se intampla in interiorul computational al calculatorului, cum gandeste el. <br/>
+</li>
+<li>
+gandire umana <br/>
+	Aceasta paradigma propune construirea unui calculator capabil sa gandeasca asemenea unui om, expunand astfel toate functiile creierului uman, inclusiv emotiile. Ea este probabil cea mai in voga din cele patru paradigme pentru ca anticipeaza dezvoltarea unor calculatoarele capabile sa devina versiuni mai bune ale noastre, ale oamenilor, imediat generand scenarii apocaliptice de suprematie a robotilor, sprijinite chiar si de unii oameni de stiinta sau importanti anteprenoti, precum Stephen Hawking sau Elon Musk. Mai mult decat atat, aceasta paradigma beneficiaza de un interes crescand datorita provocarilor pe care le pune. A face un calculator sa gandeasca asemenea unei fiinte umane inseamna a intelege cum functioneaza mintea umana, lucru pe care umanitatea nu l-a putut realiza pana in acest moment, creierul reprezentand unul dintre cele mai mari mistere care ne inconjoara inca existenta. Totusi, in ultimii ani au fost facuti pasi importanti in acest sens prin implementarea unor retele neuronale din ce in ce mai puternice si prin folosirea metodei “deep-learning” care creeaza conexiuni intre neuronii artificiali asemenea sinapselor dintre cei umani. <br/>
+</li>
+<li>
+comportament rational <br/>
+Aceasta paradigma se bazeaza pe construirea unui calculator care gandeste rational, dupa legi ale logicii bine stabilite, in genul silogismelor promovate de Aristotel (un exemplu este celebra 'Socrate este un om. Toti oamenii sunt muritori. De aceea, Socrate este muritor'). Acesta idee a fost imediat urmarita de teoreticienii logicii in secolul trecut, cand Hilbert, Godel si acelasi Alan Turing erau interesati in a raspunde celor mai profunde intrebari despre matematica si logica. Astfel, in 1955, Allen Newell si Herbert A. Simon au creat programul “Logic theorist” capabil sa demonstreze 38 din primele 52 de teoreme din “Principia mathematica”, cartea lui Russell si Whitehead. Totusi, aceasta paradigma se intalneste cu doua mari obstacole: caracterul limitativ al resurselor de care dispune un calculator si imposibilitatea de a exprima orice problema intr-un sistem logic bine-definit. <br/>
+</li>
+<li> 
+comportament rational <br/>
+Ultima dintre paradigmele prezentate se ocupa cu studiul agentilor rationali sau inteligenti. Acestia sunt entitati capabila sa primeasca si sa raspunda la stimuli primiti din mediul inconjurator intr-un mod eficient pentru a atinge un obiectiv. Ei sunt de asemenea capabili sa se adapteze modificarilor suferite de mediu si sa invete de-a lungul actiunilor lor pentru a-si maximiza rezultatele. <br/>
+
+</li>
+</ul>
+	<div class="ytvideo">
+	<iframe width="640" height="360" src="https://www.youtube.com/embed/mp0-fXhzBeE?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+	</div>
 		</div>
 </script>

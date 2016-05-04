@@ -22,14 +22,15 @@ html {
 	overflow: scroll;
 }
 
+img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .ytvideo {
 	display: block;
 	text-align: center;
-}
-
-img {
-	position: absolute;
-	display: block;
 }
 
 body {
